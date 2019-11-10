@@ -1,0 +1,157 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\cyber\Documents\projetos_VHDL\testes\simulation\qsim
+vcomparator_4b
+Z1 Id<TKfoSInAg5Xaed]2;hf2
+Z2 VZgRUYzMf0@k::XNo:7PeZ3
+Z3 dC:\Users\cyber\Documents\projetos_VHDL\testes\simulation\qsim
+Z4 w1573395688
+Z5 8timer_teste.vo
+Z6 Ftimer_teste.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|timer_teste.vo|
+Z9 o-work work -O0
+Z10 !s100 c[Oa=CzB9@kb9efVRcH8k2
+Z11 !s108 1573395690.168000
+Z12 !s107 timer_teste.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vcomparator_4b_vlg_check_tst
+Z13 I[L9ZN58i8Hm_2D_3kI2TX3
+Z14 V0MKY>Uf;cLI:fEP;_=6N52
+R3
+Z15 w1573395686
+Z16 8timer_teste.vt
+Z17 Ftimer_teste.vt
+L0 59
+R7
+r1
+31
+Z18 !s108 1573395690.421000
+Z19 !s107 timer_teste.vt|
+Z20 !s90 -work|work|timer_teste.vt|
+R9
+Z21 !s100 M=CMF1;d5b3DfPBSjPTzF1
+!i10b 1
+!s85 0
+!s101 -O0
+vcomparator_4b_vlg_sample_tst
+Z22 IKe8NADMcb`@6PJa=kQGE71
+Z23 V=:K?=zV2Yn79FRJI5a]W42
+R3
+R15
+R16
+R17
+L0 29
+R7
+r1
+31
+R18
+R19
+R20
+R9
+Z24 !s100 ozKUWWn=0E1SjIWOhP1cD2
+!i10b 1
+!s85 0
+!s101 -O0
+vcomparator_4b_vlg_vec_tst
+Z25 IlO4GS_gDmhL2;UFF0KkH<3
+Z26 V2WV<WeY]kBdUEGMVjJM[N1
+R3
+R15
+R16
+R17
+Z27 L0 154
+R7
+r1
+31
+R18
+R19
+R20
+R9
+Z28 !s100 JPGQ2Cnl8dl9`3md@<=R?2
+!i10b 1
+!s85 0
+!s101 -O0
+vtimer_teste
+Z29 !s100 z41VXTmXb3_hTG[H2aXzR1
+Z30 IV5c^k0gaWcA4LE0nIEb0_3
+Z31 VWH0oTEX;Fo5OTd:Um9nYn3
+R3
+Z32 w1573402242
+R5
+R6
+L0 31
+R7
+r1
+31
+R8
+R9
+!i10b 1
+!s85 0
+Z33 !s108 1573402244.620000
+R12
+!s101 -O0
+vtimer_teste_vlg_check_tst
+!i10b 1
+Z34 !s100 `lhGcinFJLm7amDP7DH142
+Z35 IZU7EXOQ1O[ze>;X@?F>6a2
+Z36 V@mV=_9aLFALG0hEJm3h<]3
+R3
+Z37 w1573402241
+R16
+R17
+L0 65
+R7
+r1
+!s85 0
+31
+Z38 !s108 1573402244.813000
+Z39 !s107 timer_teste.vt|
+R20
+!s101 -O0
+R9
+vtimer_teste_vlg_sample_tst
+!i10b 1
+Z40 !s100 9A3ChXm_]HdJB;bklNZh>3
+Z41 IWOJGbLL[ZVX>6Nia]>2PC1
+Z42 V`Th?fTo]44?>`?6o6j]fN2
+R3
+R37
+R16
+R17
+L0 29
+R7
+r1
+!s85 0
+31
+R38
+R39
+R20
+!s101 -O0
+R9
+vtimer_teste_vlg_vec_tst
+!i10b 1
+!s100 XoPUo4VdUaZTVCY01oz^53
+IA1LiB=kIbB3kJbJMn`d200
+Z43 Vf8>7jaamNVDUV]gfeY]8k1
+R3
+R37
+R16
+R17
+Z44 L0 240
+R7
+r1
+!s85 0
+31
+R38
+R39
+R20
+!s101 -O0
+R9

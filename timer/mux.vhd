@@ -1,0 +1,20 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity mux is
+	port(ent1, ent2: in std_logic_vector (3 downto 0);
+			s: out std_logic_vector (3 downto 0);
+			sel: in std_logic);
+end mux;
+
+architecture behavior of mux is
+	begin
+	process(sel)
+		begin
+			if sel = '1' then
+				s <= ent1;
+			else
+				s <= ent2;
+			end if;
+	end process;
+end behavior;

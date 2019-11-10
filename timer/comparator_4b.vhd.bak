@@ -1,0 +1,21 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity comparator_4b is
+	port(a, b: in std_logic_vector(3 downto 0);
+			in_eq: in std_logic;
+			aeqb: out std_logic);
+end comparator_4b;
+
+architecture behavior of comparator_4b is
+	component timer_teste is
+	port(a, b, in_eq: in std_logic;
+			out_eq: out std_logic);
+	end component;
+	signal out_eq: std_logic;
+	
+	begin
+		gen: for i in 0 to 3 generate
+			uut: timer_teste port map(a(i), b(i), in_eq, out_eq);
+		end generate;
+end behavior;

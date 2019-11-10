@@ -1,0 +1,25 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity timer_teste is
+  Port(clk, t: in STD_LOGIC;
+       Q : out STD_LOGIC);
+end timer_teste;
+
+architecture behavior of timer_teste is
+    signal counter: integer range 5 to 0;
+begin 
+    process_clk: process(clk) 
+    begin
+			if (clk='1' and clk'event) then
+				 counter <= counter - 1;
+				 if (counter = 0 and clk = '1') then
+						Q <= '1';
+						counter <= 5;
+				 end if;
+			end if;
+			if  t = '1' then
+				counter <= 5;
+			end if;
+	end process;
+end behavior;

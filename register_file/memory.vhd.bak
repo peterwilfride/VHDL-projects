@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+ENTITY memory IS
+	PORT(AX, BX, AY, BY, W, R: IN std_LOGIC);
+END memory;
+
+component decoder IS
+	PORT (A, B: IN STD_LOGIC;
+			s0, s1, s2, s3: out STD_LOGIC);
+END component;
+
+architecture comportamento of memory is
+	SIGNAL s0x, s1x, s2x, s3x: OUT std_LOGIC;
+	SIGNAL s0y, s1y, s2y, s3y: OUT std_LOGIC;
+	begin
+	u1: decoder port map(A=>AX, B=>BX, s0=>s0x, s1=>s1x, s2=>s2x, s3=>s3x);
+	u2: decoder port map(A=>AY, B=>BY, s0=>s0y, s1=>s1y, s2=>s2y, s3=>s3y);
+end comportamento

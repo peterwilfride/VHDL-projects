@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+ 
+entity wait_statement is
+	port(clk : OUT STD_logic);
+end wait_statement;
+ 
+architecture behave of wait_statement is
+ 
+  constant c_CLK_PERIOD : time := 10 ns;
+  begin
+		process
+		clk <= '0';
+		wait for c_ClK_PERIOD;
+		clk <= '1';
+		wait for c_ClK_PERIOD;
+	end process;
+end behave;

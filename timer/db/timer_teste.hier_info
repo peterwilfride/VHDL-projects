@@ -1,0 +1,249 @@
+|timer_teste
+load => orToReg.IN1
+load => registrador_4b:t2.load
+load => mux:t3.sel
+enable => down_counter4b:t4.cnt_t
+clk => registrador_4b:t2.clk
+clk => down_counter4b:t4.clk_t
+clr => registrador_4b:t2.clr
+clr => down_counter4b:t4.clr_t
+M[0] => decrementer:t1.a[0]
+M[1] => decrementer:t1.a[1]
+M[2] => decrementer:t1.a[2]
+M[3] => decrementer:t1.a[3]
+Q <= down_counter4b:t4.Q
+Z[0] <= down_counter4b:t4.Z[0]
+Z[1] <= down_counter4b:t4.Z[1]
+Z[2] <= down_counter4b:t4.Z[2]
+Z[3] <= down_counter4b:t4.Z[3]
+
+
+|timer_teste|decrementer:t1
+a[0] => subtrador_1b:gen:0:uut.a
+a[1] => subtrador_1b:gen:1:uut.a
+a[2] => subtrador_1b:gen:2:uut.a
+a[3] => subtrador_1b:gen:3:uut.a
+s[0] <= subtrador_1b:gen:0:uut.s
+s[1] <= subtrador_1b:gen:1:uut.s
+s[2] <= subtrador_1b:gen:2:uut.s
+s[3] <= subtrador_1b:gen:3:uut.s
+wout <= subtrador_1b:gen:3:uut.wout
+
+
+|timer_teste|decrementer:t1|subtrador_1b:\gen:0:uut
+a => s~3.IN1
+a => s~1.IN1
+b => s~0.IN0
+b => s~2.IN0
+b => wout~0.IN0
+win => s~0.IN1
+win => s~2.IN1
+win => wout~0.IN1
+s <= s~4.DB_MAX_OUTPUT_PORT_TYPE
+wout <= wout~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|timer_teste|decrementer:t1|subtrador_1b:\gen:1:uut
+a => s~3.IN1
+a => s~1.IN1
+b => s~0.IN0
+b => s~2.IN0
+b => wout~0.IN0
+win => s~0.IN1
+win => s~2.IN1
+win => wout~0.IN1
+s <= s~4.DB_MAX_OUTPUT_PORT_TYPE
+wout <= wout~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|timer_teste|decrementer:t1|subtrador_1b:\gen:2:uut
+a => s~3.IN1
+a => s~1.IN1
+b => s~0.IN0
+b => s~2.IN0
+b => wout~0.IN0
+win => s~0.IN1
+win => s~2.IN1
+win => wout~0.IN1
+s <= s~4.DB_MAX_OUTPUT_PORT_TYPE
+wout <= wout~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|timer_teste|decrementer:t1|subtrador_1b:\gen:3:uut
+a => s~3.IN1
+a => s~1.IN1
+b => s~0.IN0
+b => s~2.IN0
+b => wout~0.IN0
+win => s~0.IN1
+win => s~2.IN1
+win => wout~0.IN1
+s <= s~4.DB_MAX_OUTPUT_PORT_TYPE
+wout <= wout~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|timer_teste|registrador_4b:t2
+n[0] => s[0]~reg0.DATAIN
+n[1] => s[1]~reg0.DATAIN
+n[2] => s[2]~reg0.DATAIN
+n[3] => s[3]~reg0.DATAIN
+s[0] <= s[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+load => s[0]~reg0.ENA
+load => s[1]~reg0.ENA
+load => s[2]~reg0.ENA
+load => s[3]~reg0.ENA
+clk => s[0]~reg0.CLK
+clk => s[1]~reg0.CLK
+clk => s[2]~reg0.CLK
+clk => s[3]~reg0.CLK
+clr => s[0]~reg0.ACLR
+clr => s[1]~reg0.ACLR
+clr => s[2]~reg0.ACLR
+clr => s[3]~reg0.ACLR
+
+
+|timer_teste|mux:t3
+ent1[0] => s~3.DATAB
+ent1[1] => s~2.DATAB
+ent1[2] => s~1.DATAB
+ent1[3] => s~0.DATAB
+ent2[0] => s~3.DATAA
+ent2[1] => s~2.DATAA
+ent2[2] => s~1.DATAA
+ent2[3] => s~0.DATAA
+s[0] <= s~3.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s~2.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s~1.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+sel => s~0.OUTPUTSELECT
+sel => s~1.OUTPUTSELECT
+sel => s~2.OUTPUTSELECT
+sel => s~3.OUTPUTSELECT
+
+
+|timer_teste|down_counter4b:t4
+load_t => orToReg.IN0
+load_t => mux:a1.sel
+cnt_t => orToReg.IN1
+clk_t => registrador_4b:a2.clk
+clr_t => registrador_4b:a2.clr
+M[0] => mux:a1.ent1[0]
+M[1] => mux:a1.ent1[1]
+M[2] => mux:a1.ent1[2]
+M[3] => mux:a1.ent1[3]
+Q <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+Z[0] <= registrador_4b:a2.s[0]
+Z[1] <= registrador_4b:a2.s[1]
+Z[2] <= registrador_4b:a2.s[2]
+Z[3] <= registrador_4b:a2.s[3]
+
+
+|timer_teste|down_counter4b:t4|mux:a1
+ent1[0] => s~3.DATAB
+ent1[1] => s~2.DATAB
+ent1[2] => s~1.DATAB
+ent1[3] => s~0.DATAB
+ent2[0] => s~3.DATAA
+ent2[1] => s~2.DATAA
+ent2[2] => s~1.DATAA
+ent2[3] => s~0.DATAA
+s[0] <= s~3.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s~2.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s~1.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s~0.DB_MAX_OUTPUT_PORT_TYPE
+sel => s~0.OUTPUTSELECT
+sel => s~1.OUTPUTSELECT
+sel => s~2.OUTPUTSELECT
+sel => s~3.OUTPUTSELECT
+
+
+|timer_teste|down_counter4b:t4|registrador_4b:a2
+n[0] => s[0]~reg0.DATAIN
+n[1] => s[1]~reg0.DATAIN
+n[2] => s[2]~reg0.DATAIN
+n[3] => s[3]~reg0.DATAIN
+s[0] <= s[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+load => s[0]~reg0.ENA
+load => s[1]~reg0.ENA
+load => s[2]~reg0.ENA
+load => s[3]~reg0.ENA
+clk => s[0]~reg0.CLK
+clk => s[1]~reg0.CLK
+clk => s[2]~reg0.CLK
+clk => s[3]~reg0.CLK
+clr => s[0]~reg0.ACLR
+clr => s[1]~reg0.ACLR
+clr => s[2]~reg0.ACLR
+clr => s[3]~reg0.ACLR
+
+
+|timer_teste|down_counter4b:t4|decrementer:a3
+a[0] => subtrador_1b:gen:0:uut.a
+a[1] => subtrador_1b:gen:1:uut.a
+a[2] => subtrador_1b:gen:2:uut.a
+a[3] => subtrador_1b:gen:3:uut.a
+s[0] <= subtrador_1b:gen:0:uut.s
+s[1] <= subtrador_1b:gen:1:uut.s
+s[2] <= subtrador_1b:gen:2:uut.s
+s[3] <= subtrador_1b:gen:3:uut.s
+wout <= subtrador_1b:gen:3:uut.wout
+
+
+|timer_teste|down_counter4b:t4|decrementer:a3|subtrador_1b:\gen:0:uut
+a => s~3.IN1
+a => s~1.IN1
+b => s~0.IN0
+b => s~2.IN0
+b => wout~0.IN0
+win => s~0.IN1
+win => s~2.IN1
+win => wout~0.IN1
+s <= s~4.DB_MAX_OUTPUT_PORT_TYPE
+wout <= wout~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|timer_teste|down_counter4b:t4|decrementer:a3|subtrador_1b:\gen:1:uut
+a => s~3.IN1
+a => s~1.IN1
+b => s~0.IN0
+b => s~2.IN0
+b => wout~0.IN0
+win => s~0.IN1
+win => s~2.IN1
+win => wout~0.IN1
+s <= s~4.DB_MAX_OUTPUT_PORT_TYPE
+wout <= wout~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|timer_teste|down_counter4b:t4|decrementer:a3|subtrador_1b:\gen:2:uut
+a => s~3.IN1
+a => s~1.IN1
+b => s~0.IN0
+b => s~2.IN0
+b => wout~0.IN0
+win => s~0.IN1
+win => s~2.IN1
+win => wout~0.IN1
+s <= s~4.DB_MAX_OUTPUT_PORT_TYPE
+wout <= wout~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|timer_teste|down_counter4b:t4|decrementer:a3|subtrador_1b:\gen:3:uut
+a => s~3.IN1
+a => s~1.IN1
+b => s~0.IN0
+b => s~2.IN0
+b => wout~0.IN0
+win => s~0.IN1
+win => s~2.IN1
+win => wout~0.IN1
+s <= s~4.DB_MAX_OUTPUT_PORT_TYPE
+wout <= wout~1.DB_MAX_OUTPUT_PORT_TYPE
+
+

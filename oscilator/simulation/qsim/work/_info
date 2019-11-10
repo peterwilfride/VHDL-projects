@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\aluno\Documents\CircuitosD\ProjetoOSC\simulation\qsim
+vwait_statement
+Z1 !s100 gJ3CjRR4?NI<WXSfQ4a?=1
+Z2 IKY7oIh>>>;UkbNX<gTzQY1
+Z3 Vgd7e7M<W:TZ0_84JfgI4h2
+Z4 dC:\Users\aluno\Documents\CircuitosD\ProjetoOSC\simulation\qsim
+Z5 w1569618753
+Z6 8osc.vo
+Z7 Fosc.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|osc.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1569618754.907000
+Z12 !s107 osc.vo|
+!s101 -O0
+vwait_statement_vlg_check_tst
+!i10b 1
+Z13 !s100 G9j[fX3foZ_UNRQ1JWcIW2
+Z14 IQaXZ5S7nz;=oa2K?7=[nN3
+Z15 VL49V62OLDfGMHbk7Si0`o0
+R4
+Z16 w1569618751
+Z17 8osc.vt
+Z18 Fosc.vt
+L0 57
+R8
+r1
+!s85 0
+31
+Z19 !s108 1569618755.168000
+Z20 !s107 osc.vt|
+Z21 !s90 -work|work|osc.vt|
+!s101 -O0
+R10
+vwait_statement_vlg_sample_tst
+!i10b 1
+Z22 !s100 MfTT[IZmg:QMW9ZlGVOIe1
+Z23 ImH[O0mDUR5<M4^TWdV8>K0
+Z24 VX1RgWa>23?e4EfzAh><X11
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vwait_statement_vlg_vec_tst
+!i10b 1
+!s100 XSPEl9BPj309gmkdm]R0:2
+IRPGBMYg;dP_MGL>BOc4=71
+Z25 VTbI5A;_:g_kk;c209W2ck3
+R4
+R16
+R17
+R18
+Z26 L0 152
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
